@@ -1,0 +1,55 @@
+II. Utilisation des ports
+
+🌞 Sur le PC serveur
+PS C:\Users\Moreaux\Downloads\netcat-win32-1.11\netcat-1.11> ./nc64.exe -l -p 9998
+
+🌞 Sur le PC serveur toujours
+utiliser une commande pour voir qu'il y a désormais un port en écoute
+mettez-moi uniquement la ligne intéressante du résultat dans le rendu
+PS C:\Users\Moreaux\Downloads\netcat-win32-1.11\netcat-1.11> netstat -a -b -n
+
+
+
+
+
+
+
+
+
+
+
+
+🌞 Echangez-vous des messages
+
+PS C:\Users\Moreaux\Downloads\netcat-win32-1.11\netcat-1.11> ./nc64.exe -l -p 9999
+dfghjk
+zerth
+bonjour
+
+yo
+PS C:\Users\Moreaux\Downloads\netcat-win32-1.11\netcat-1.11> ./nc64.exe 10.1.1.1 1111
+fg
+yo
+dfdg
+gjhj
+tu
+
+🌞 Utilisez une commande qui permet de voir la connexion en cours
+
+PS C:\Users\Moreaux\Downloads\netcat-win32-1.11\netcat-1.11> netstat 10.1.1.2:9998
+
+Connexions actives
+
+  Proto  Adresse locale         Adresse distante       État
+  TCP    10.1.1.2:9998          Jawad:30866            ESTABLISHED
+
+
+
+🌞 Inversez les rôles
+
+PS C:\Users\Moreaux\Downloads\netcat-win32-1.11\netcat-1.11> netstat 10.1.1.1:9999
+
+Connexions actives
+
+  Proto  Adresse locale         Adresse distante       État
+  TCP    10.1.1.2:57340         Jawad:9999             ESTABLISHED
